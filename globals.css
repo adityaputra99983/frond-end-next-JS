@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #2ecc71;
+  --accent-green: #27ae60;
+  --accent-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --text-dark: #171717;
+}
