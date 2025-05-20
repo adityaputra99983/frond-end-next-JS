@@ -1,105 +1,162 @@
 import React from 'react';
+import './globals.css';
 import Link from 'next/link';
-import Image from 'next/image';
 
-export default function ProductPage() {
-  const products = [
-    {
-      id: 1,
-      name: 'Modern Sofa',
-      description: 'Elegant and comfortable 3-seater modern sofa',
-      price: '$999.99',
-      imageUrl: 'https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/12/5/889534d8-4c8a-4c7f-8b7e-096f9743d3ef.jpg ',
-    },
-    {
-      id: 2,
-      name: 'Dining Table Set',
-      description: 'Contemporary 6-seater dining table set',
-      price: '$549.99',
-      imageUrl: 'https://www.soho.id/1623-superlarge_default/meja-makan-igor-dining-table.jpg ',
-    },
-    {
-      id: 3,
-      name: 'Queen Size Bed',
-      description: 'Luxurious queen size bed with storage',
-      price: '$799.99',
-      imageUrl: 'https://media.furniturevillage.co.uk/i/fv/PRODZFRSP000000000047555_emma_plus-diamond-hybrid-mattress__lifestyle? $medium$&fmt=auto&w=579',
-    },
-    {
-      id: 4,
-      name: 'Wardrobe Cabinet',
-      description: 'Spacious 3-door wardrobe with mirror',
-      price: '$449.99',
-      imageUrl: 'https://lagomhomestore.com/cdn/shop/files/kursi-kayu-jati-solid-dengan-material-premium-loom-chair-lagom-home-store-teak-furniture-boutique-jati-furnitur-jakarta-41885069082860.png?v=1737472440 ',
-    },
-    {
-      id: 5,
-      name: 'Coffee Table',
-      description: 'Modern glass top coffee table',
-      price: '$199.99',
-      imageUrl: 'https://images.tokopedia.net/img/cache/700/product-1/2020/3/18/7621886/7621886_9528292b-664f-48ac-a205-66df6b729f7f_720_720.jpg ',
-    },
-    {
-      id: 6,
-      name: 'Study Desk',
-      description: 'Compact study desk with drawers',
-      price: '$299.99',
-      imageUrl: 'https://image.made-in-china.com/2f0j00sUNquQrCYDcp/Good-Price-Office-Home-Hotel-Bedroom-Furniture-Durable-Computer-Study-Desk.webp ',
-    },
-  ];
+export default function Home() {
+ return (
+      <main className="bg-green-400 min-h-screen">
 
-  return (
-    <div className="min-h-screen bg-blue-100 flex flex-col">
-      {/* Navigation */}
-      <nav className="bg-white shadow-md">
-        <div className="container mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-800">Furniture Store</h1>
-          <Link href="/" className="flex items-center text-sm md:text-base text-gray-600 hover:text-blue-600 transition-colors duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
-            </svg>
-            Back to Home
+      <header className="bg-green-100 shadow-md sticky top-0 z-50">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center">
+          <h1 className="text-2xl font-bold text-gray-800 hover:text-violet-800 transition-colors">Furniture</h1>
+          <nav className="mt-4 sm:mt-0">
+            <ul className="flex space-x-6">
+              <li><a href="#about" className="text-gray-600 hover:text-indigo-200 transition-colors font-bold">About</a></li>
+              <li><Link href="/produk" className="text-gray-600 hover:text-indigo-300 transition-colors font-bold">Products</Link></li>
+              <li><a href="#contak" className="text-gray-600 hover:text-indigo-200 transition-colors font-bold">Contact</a></li>
+              <li>
+                |
+              </li>
+              <li>
+              <a href="https://github.com" className="text-gray-600 hover:text-indigo-200 transition-colors">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero section with responsive text */}
+      <section className="bg-cover bg-center h-[48vh] sm:h-[60vh] relative" 
+           style={{ 
+         backgroundImage: "url('https://img.freepik.com/free-photo/armchair-green-living-room-with-copy-space_43614-910.jpg?semt=ais_hybrid&w=740')",
+         backgroundAttachment: "fixed"
+           }}>
+        <div className="absolute inset-0 bg-opacity-50">
+          <div className="h-full flex items-center justify-center">
+        <div className="text-center text-white px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold transform hover:scale-105 transition-transform">
+        Transform Your Space
+          </h2>
+          <p className="mt-4 text-base sm:text-lg md:text-xl">
+        Discover elegant furniture for every room in your home.
+          </p>
+          <Link href="/produk" 
+        className="mt-6 inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg text-lg font-semibold 
+         hover:bg-yellow-600 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        Shop Now
           </Link>
         </div>
-      </nav>
+          </div>
+        </div>
+      </section>
 
-      {/* Main Content */}
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800">Furniture Collection</h2>
+      {/* Product Categories section */}
+      <section className="py-8 sm:py-12 md:py-16 bg-violet-200">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center hover:text-violet-300 transition-colors mb-4 sm:mb-8">
+        Our Furniture Collections
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        {/* Modern Collection */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <img 
+            src="https://events.rumah123.com/wp-content/uploads/sites/38/2022/07/15150257/Gambar-furniture-minimalis-modern-coffee-table-multifunction.jpg" 
+            alt="Modern Furniture"
+            className="w-full h-48 sm:h-56 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+          <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
+            <h4 className="text-white text-lg sm:text-xl md:text-2xl font-bold">Modern Collection</h4>
+          </div>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="relative h-48 sm:h-64 w-full">
-                <Image
-                  src={product.imageUrl.trim()}
-                  alt={product.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  unoptimized
-                />
-              </div>
-              <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">{product.name}</h2>
-                <p className="text-sm text-gray-600 mb-4">{product.description}</p>
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">
-                  <span className="text-lg font-bold text-blue-600">{product.price}</span>
-                  <button className="w-full sm:w-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 text-sm">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+        {/* Contemporary Collection */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <img 
+            src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126" 
+            alt="Contemporary Furniture"
+            className="w-full h-48 sm:h-56 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+          <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
+            <h4 className="text-white text-lg sm:text-xl md:text-2xl font-bold">Contemporary Collection</h4>
+          </div>
+        </div>
+
+        {/* Classic Collection */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <img 
+            src="https://images.unsplash.com/photo-1618220179428-22790b461013" 
+            alt="Classic Furniture"
+            className="w-full h-48 sm:h-56 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+          <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
+            <h4 className="text-white text-lg sm:text-xl md:text-2xl font-bold">Classic Collection</h4>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feedback section with responsive grid and hover effects */}
+      <section id="feedback" className="py-12 sm:py-16 bg-gray-100">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center hover:text-violet-300 transition-colors">Customer Feedback</h3>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Feedback cards with hover effects */}
+        <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+          <div className="flex items-center mb-4">
+            <img src="data:image/jpeg;base64,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" alt="Customer" className="w-12 h-12 rounded-full"/>
+            <div className="ml-4">
+          <h4 className="font-semibold">Roseanne Park</h4>
+          <div className="flex text-yellow-500">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
             </div>
-          ))}
+          </div>
+          <p className="text-gray-600">Amazing quality furniture! The delivery was prompt and the assembly service was excellent.</p>
         </div>
-      </main>
+
+        <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+          <div className="flex items-center mb-4">
+            <img src="https://vz.cnwimg.com/wp-content/uploads/2019/11/Henry-Cavill.jpg" alt="Customer" className="w-12 h-12 rounded-full"/>
+            <div className="ml-4">
+          <h4 className="font-semibold">Henry Carvile</h4>
+          <div className="flex text-yellow-500">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+            </div>
+          </div>
+          <p className="text-gray-600">Great selection of modern furniture. The quality exceeds expectations!</p>
+        </div>
+
+        <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+          <div className="flex items-center mb-4">
+            <img src="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/benaffleck.png" alt="Customer" className="w-12 h-12 rounded-full"/>
+            <div className="ml-4">
+          <h4 className="font-semibold">Ben Affleck</h4>
+          <div className="flex text-yellow-500">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+            </div>
+          </div>
+          <p className="text-gray-600">Beautiful furniture and excellent customer service. Will definitely shop here again!</p>
+        </div>
+          </div>
+        </div>
+      </section>
 
       {/* Responsive footer */}
       <footer id="contact" className="bg-gray-800 text-white py-8">
@@ -163,6 +220,6 @@ export default function ProductPage() {
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }
